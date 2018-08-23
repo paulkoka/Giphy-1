@@ -10,12 +10,19 @@
 
 @interface MainViewController ()
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    GiphyCollectionViewLayout *layout = self.collectionView.collectionViewLayout;
+    if (layout != nil) {
+        layout.delegate = self;
+    }
     
     self.presenter = [[MainViewPresenter alloc] init];
     [self.presenter testFunc];
