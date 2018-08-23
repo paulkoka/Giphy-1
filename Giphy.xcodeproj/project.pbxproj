@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DA735113212EFD2A00474459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA735112212EFD2A00474459 /* AppDelegate.swift */; };
-		DA735115212EFD2A00474459 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA735114212EFD2A00474459 /* ViewController.swift */; };
 		DA735118212EFD2A00474459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA735116212EFD2A00474459 /* Main.storyboard */; };
 		DA73511B212EFD2A00474459 /* Giphy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA735119212EFD2A00474459 /* Giphy.xcdatamodeld */; };
 		DA73511D212EFD2B00474459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA73511C212EFD2B00474459 /* Assets.xcassets */; };
 		DA735120212EFD2B00474459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA73511E212EFD2B00474459 /* LaunchScreen.storyboard */; };
 		DA73512B212EFD2B00474459 /* GiphyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73512A212EFD2B00474459 /* GiphyTests.swift */; };
+		DA735141212EFF7E00474459 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA735140212EFF7E00474459 /* MainViewController.m */; };
+		DA735143212EFF8A00474459 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA735142212EFF8A00474459 /* MainViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,6 @@
 /* Begin PBXFileReference section */
 		DA73510F212EFD2A00474459 /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA735112212EFD2A00474459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA735114212EFD2A00474459 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA735117212EFD2A00474459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA73511A212EFD2A00474459 /* Giphy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Giphy.xcdatamodel; sourceTree = "<group>"; };
 		DA73511C212EFD2B00474459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +38,10 @@
 		DA735126212EFD2B00474459 /* GiphyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiphyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA73512A212EFD2B00474459 /* GiphyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyTests.swift; sourceTree = "<group>"; };
 		DA73512C212EFD2B00474459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA73513A212EFE5900474459 /* Giphy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Giphy-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA73513F212EFF7E00474459 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		DA735140212EFF7E00474459 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		DA735142212EFF8A00474459 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +83,13 @@
 		DA735111212EFD2A00474459 /* Giphy */ = {
 			isa = PBXGroup;
 			children = (
-				DA735112212EFD2A00474459 /* AppDelegate.swift */,
-				DA735114212EFD2A00474459 /* ViewController.swift */,
-				DA735116212EFD2A00474459 /* Main.storyboard */,
-				DA73511C212EFD2B00474459 /* Assets.xcassets */,
-				DA73511E212EFD2B00474459 /* LaunchScreen.storyboard */,
+				DA735137212EFE1400474459 /* Storyboards */,
+				DA735135212EFDE900474459 /* Support Files */,
+				DA735138212EFE2800474459 /* Controllers */,
+				DA73513E212EFF4B00474459 /* Presenters */,
 				DA735121212EFD2B00474459 /* Info.plist */,
 				DA735119212EFD2A00474459 /* Giphy.xcdatamodeld */,
+				DA73513A212EFE5900474459 /* Giphy-Bridging-Header.h */,
 			);
 			path = Giphy;
 			sourceTree = "<group>";
@@ -97,6 +101,41 @@
 				DA73512C212EFD2B00474459 /* Info.plist */,
 			);
 			path = GiphyTests;
+			sourceTree = "<group>";
+		};
+		DA735135212EFDE900474459 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA73511C212EFD2B00474459 /* Assets.xcassets */,
+				DA735112212EFD2A00474459 /* AppDelegate.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		DA735137212EFE1400474459 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DA735116212EFD2A00474459 /* Main.storyboard */,
+				DA73511E212EFD2B00474459 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DA735138212EFE2800474459 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA73513F212EFF7E00474459 /* MainViewController.h */,
+				DA735140212EFF7E00474459 /* MainViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DA73513E212EFF4B00474459 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				DA735142212EFF8A00474459 /* MainViewPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +188,7 @@
 				TargetAttributes = {
 					DA73510E212EFD2A00474459 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					DA735125212EFD2B00474459 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -200,8 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA735115212EFD2A00474459 /* ViewController.swift in Sources */,
 				DA735113212EFD2A00474459 /* AppDelegate.swift in Sources */,
+				DA735141212EFF7E00474459 /* MainViewController.m in Sources */,
+				DA735143212EFF8A00474459 /* MainViewPresenter.swift in Sources */,
 				DA73511B212EFD2A00474459 /* Giphy.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +320,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -339,6 +381,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -362,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Giphy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -370,6 +414,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vicmac.Giphy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Giphy/Giphy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Giphy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -387,6 +434,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vicmac.Giphy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Giphy/Giphy-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
