@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4967BA212F0565009206A7 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4967B9212F0565009206A7 /* DownloadManager.m */; };
 		DA735113212EFD2A00474459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA735112212EFD2A00474459 /* AppDelegate.swift */; };
 		DA735118212EFD2A00474459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA735116212EFD2A00474459 /* Main.storyboard */; };
 		DA73511B212EFD2A00474459 /* Giphy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA735119212EFD2A00474459 /* Giphy.xcdatamodeld */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA4967B8212F0565009206A7 /* DownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		DA4967B9212F0565009206A7 /* DownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		DA73510F212EFD2A00474459 /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA735112212EFD2A00474459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA735117212EFD2A00474459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA4967B6212F0544009206A7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DA4967B7212F054D009206A7 /* DownloadManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DA4967B7212F054D009206A7 /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA4967B8212F0565009206A7 /* DownloadManager.h */,
+				DA4967B9212F0565009206A7 /* DownloadManager.m */,
+			);
+			path = DownloadManager;
+			sourceTree = "<group>";
+		};
 		DA735106212EFD2A00474459 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +103,7 @@
 		DA735111212EFD2A00474459 /* Giphy */ = {
 			isa = PBXGroup;
 			children = (
+				DA4967B6212F0544009206A7 /* Managers */,
 				DA735137212EFE1400474459 /* Storyboards */,
 				DA735135212EFDE900474459 /* Support Files */,
 				DA735138212EFE2800474459 /* Controllers */,
@@ -243,6 +264,7 @@
 				DA735113212EFD2A00474459 /* AppDelegate.swift in Sources */,
 				DA735141212EFF7E00474459 /* MainViewController.m in Sources */,
 				DA735143212EFF8A00474459 /* MainViewPresenter.swift in Sources */,
+				DA4967BA212F0565009206A7 /* DownloadManager.m in Sources */,
 				DA73511B212EFD2A00474459 /* Giphy.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
