@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4967BC212F062F009206A7 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4967BB212F062F009206A7 /* JSONParser.swift */; };
 		DA735113212EFD2A00474459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA735112212EFD2A00474459 /* AppDelegate.swift */; };
 		DA735118212EFD2A00474459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA735116212EFD2A00474459 /* Main.storyboard */; };
 		DA73511B212EFD2A00474459 /* Giphy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA735119212EFD2A00474459 /* Giphy.xcdatamodeld */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA4967BB212F062F009206A7 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		DA73510F212EFD2A00474459 /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA735112212EFD2A00474459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA735117212EFD2A00474459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA4967BD212F0633009206A7 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				DA4967BB212F062F009206A7 /* JSONParser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
 		DA735106212EFD2A00474459 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		DA735111212EFD2A00474459 /* Giphy */ = {
 			isa = PBXGroup;
 			children = (
+				DA4967BD212F0633009206A7 /* Parsers */,
 				DA735137212EFE1400474459 /* Storyboards */,
 				DA735135212EFDE900474459 /* Support Files */,
 				DA735138212EFE2800474459 /* Controllers */,
@@ -241,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA735113212EFD2A00474459 /* AppDelegate.swift in Sources */,
+				DA4967BC212F062F009206A7 /* JSONParser.swift in Sources */,
 				DA735141212EFF7E00474459 /* MainViewController.m in Sources */,
 				DA735143212EFF8A00474459 /* MainViewPresenter.swift in Sources */,
 				DA73511B212EFD2A00474459 /* Giphy.xcdatamodeld in Sources */,
